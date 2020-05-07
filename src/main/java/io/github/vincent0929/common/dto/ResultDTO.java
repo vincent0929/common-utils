@@ -23,8 +23,8 @@ public class ResultDTO<T> {
         return resultDTO;
     }
 
-    public static ResultDTO fail(Integer code, String message) {
-        ResultDTO resultDTO = new ResultDTO();
+    public static <E> ResultDTO<E> fail(Integer code, String message) {
+        ResultDTO<E> resultDTO = new ResultDTO<>();
         resultDTO.setSuccess(false);
         resultDTO.setCode(code);
         resultDTO.setMessage(message);
