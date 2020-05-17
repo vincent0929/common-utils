@@ -4,8 +4,12 @@ import io.github.vincent0929.common.constant.BaseEnum;
 import lombok.Data;
 import lombok.Getter;
 
+import java.io.Serializable;
+
 @Data
-public class ResultDTO<T> {
+public class ResultDTO<T> implements Serializable {
+
+    private static final long serialVersionUID = 4880497561661508152L;
 
     private boolean success;
 
